@@ -5,14 +5,6 @@ You can use this file to make changes to the
 dashboard. Updates to this page are coming soon.
 It's turned off by default, but you can call it
 via the functions file.
-
-Developed by: Eddie Machado
-URL: http://themble.com/bones/
-
-Special Thanks for code & inspiration to:
-@jackmcconnell - http://www.voltronik.co.uk/
-Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
-
 */
 
 /************* DASHBOARD WIDGETS *****************/
@@ -31,13 +23,6 @@ function disable_default_dashboard_widgets() {
 
 	// removing plugin dashboard boxes
 	remove_meta_box('yoast_db_widget', 'dashboard', 'normal');         // Yoast's SEO Plugin Widget
-
-	/*
-	have more plugin widgets you'd like to remove?
-	share them with us so we can get a list of
-	the most commonly used. :D
-	https://github.com/eddiemachado/bones/issues
-	*/
 }
 
 /*

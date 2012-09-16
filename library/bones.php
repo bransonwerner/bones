@@ -1,12 +1,10 @@
 <?php
-/* Welcome to Bones :)
-This is the core Bones file where most of the
+/* 
+This is the core file where most of the
 main functions & features reside. If you have 
 any custom functions, it's best to put them
 in the functions.php file.
 
-Developed by: Eddie Machado
-URL: http://themble.com/bones/
 */
 
 /*********************
