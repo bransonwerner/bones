@@ -13,22 +13,33 @@ http://codex.wordpress.org/Creating_Admin_Themes
 
 ******************************************************************/
 /* the form box */
-/*
-This is the Wordpress logo in the admin area.
-You'll have to load your own images and mess
-with the width and height.
-*/
-.login h1 a {
+body.login {
+  /*
+	This is the Wordpress logo in the admin area.
+	You'll have to load your own images and mess
+	with the width and height.
+	*/
+
+  /*
+	You'll have to override some of the default styles
+	but since we're referencing the id, it should be easy.
+	*/
+
+  /* login button*/
+
+}
+body.login h1 a {
   background: url(../images/login-logo.png) no-repeat top center;
   /* make sure to replace this! */
+
   width: 326px;
   height: 67px;
   text-indent: -9999px;
   overflow: hidden;
   padding-bottom: 15px;
-  display: block; }
-
-form {
+  display: block;
+}
+body.login form {
   margin-left: 8px;
   padding: 26px 24px 46px;
   font-weight: normal;
@@ -41,10 +52,10 @@ form {
   -webkit-box-shadow: none;
   -khtml-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none; }
-
-body form .input {
-  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+  box-shadow: none;
+}
+body.login form .input {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   font-weight: 200;
   font-size: 24px;
   width: 97%;
@@ -57,10 +68,5 @@ body form .input {
   outline: none;
   -webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
   -moz-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
-  box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2); }
-
-/*
-You'll have to override some of the default styles
-but since we're referencing the id, it should be easy.
-*/
-/* login button*/
+  box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+}
