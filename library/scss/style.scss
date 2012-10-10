@@ -118,3 +118,24 @@ be set to display none.
 @media print {
 	@import "print";
 }
+
+#mainnav{ background:rgba($black, 0.5); padding: 10px 0; overflow:auto;}
+#mainnav #logo {float:left;}
+#mainnav ul{margin:0;}
+#mainnav #searchform {float:right;}
+#mainnav nav {float:right;}
+#mainnav nav ul li {margin: 10px; text-transform:uppercase;}
+
+.footer {
+	clear: both;
+	background: url('../images/bg_footer.png') $drk-grey;
+	color: $lt-grey;
+	border-top: 20px solid $salmon;
+
+}
+
+.footer #extras {
+	background: $drk-grey;
+	padding: 10px 0;
+	margin: 10px 0 0 0;
+}

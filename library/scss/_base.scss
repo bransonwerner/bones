@@ -11,6 +11,8 @@ and will be used across all viewports.
 
 ******************************************************************/
 
+@import "mixins";
+
 /*********************
 GENERAL STYLES
 *********************/
@@ -19,7 +21,7 @@ body {
 	font-family: Georgia, serif;
 	font-size: 14px;
 	line-height: 1.5;
-	color: #565656;
+	color: #212121;
 }
 
 /********************
@@ -167,7 +169,7 @@ and moe scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
 	border-bottom: 0;
 
 	li {
