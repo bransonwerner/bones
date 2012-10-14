@@ -524,8 +524,22 @@ TYPOGRAPHY
 *********************/
 @font-face {
   font-family: 'RobotoRegular';
-  src: url("library/fonts/Roboto-Regular-webfont.eot");
-  src: url("library/fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Roboto-Regular-webfont.woff") format("woff"), url("library/fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("library/fonts/Roboto-Regular-webfont.svg#RobotoRegular") format("svg");
+  src: url("../fonts/Roboto-Regular-webfont.eot");
+  src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#RobotoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url("../fonts/Roboto-Light-webfont.eot");
+  src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto-Light-webfont.svg#RobotoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url("../fonts/Roboto-Bold-webfont.eot");
+  src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#RobotoRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -760,8 +774,22 @@ TYPOGRAPHY
 *********************/
 @font-face {
   font-family: 'RobotoRegular';
-  src: url("library/fonts/Roboto-Regular-webfont.eot");
-  src: url("library/fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Roboto-Regular-webfont.woff") format("woff"), url("library/fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("library/fonts/Roboto-Regular-webfont.svg#RobotoRegular") format("svg");
+  src: url("../fonts/Roboto-Regular-webfont.eot");
+  src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#RobotoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url("../fonts/Roboto-Light-webfont.eot");
+  src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto-Light-webfont.svg#RobotoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url("../fonts/Roboto-Bold-webfont.eot");
+  src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#RobotoRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -974,7 +1002,7 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 960px;
   margin: 0 auto; }
 
 /*********************
@@ -1038,13 +1066,6 @@ HEADER SYTLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function, this is so we can
-easily just write on group of styles for
-the navs on the site and our css is cleaner
-and moe scalable.
-*/
 .nav {
   border: 1px solid #ccc;
   border-bottom: 0;
@@ -1063,7 +1084,6 @@ and moe scalable.
       display: block;
       text-decoration: none;
       padding: 10px 10px;
-      background-color: #eee;
       border-bottom: 1px solid #ccc;
       /*
       remember this is for mobile ONLY, so there's no need
@@ -1080,7 +1100,7 @@ and moe scalable.
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 2.2em; }
+  margin: 2em 0; }
 
 /* end .hentry */
 /* want to style individual post classes? Booya! */
@@ -1795,12 +1815,14 @@ be set to display none.
   nav {
     display: none; } }
 #mainnav {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(25, 25, 25, 0.5);
   padding: 10px 0;
-  overflow: auto; }
+  overflow: auto;
+  font-family: "RobotoRegular", Arial, sans-serif; }
 
 #mainnav #logo {
-  float: left; }
+  float: left;
+  margin: 0; }
 
 #mainnav ul {
   margin: 0; }
@@ -1811,9 +1833,17 @@ be set to display none.
 #mainnav nav {
   float: right; }
 
-#mainnav nav ul li {
+#mainnav nav ul li a {
   margin: 10px;
-  text-transform: uppercase; }
+  color: white;
+  background: none; }
+
+.header .slogan h1 {
+  margin: 0.2em 0; }
+
+.header .slogan h2 {
+  font-family: "RobotoLight", Arial, sans-serif;
+  margin: 0.2em 0; }
 
 .footer {
   clear: both;
@@ -1822,6 +1852,8 @@ be set to display none.
   border-top: 20px solid #d4726b; }
 
 .footer #extras {
-  background: #222222;
+  background: #191919;
   padding: 10px 0;
-  margin: 10px 0 0 0; }
+  margin: 10px 0 0 0;
+  font-size: 11px;
+  font-family: "RobotoRegular", Arial, sans-serif; }

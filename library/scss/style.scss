@@ -119,12 +119,15 @@ be set to display none.
 	@import "print";
 }
 
-#mainnav{ background:rgba($black, 0.5); padding: 10px 0; overflow:auto;}
-#mainnav #logo {float:left;}
+#mainnav{ background:rgba($black, 0.5); padding: 10px 0; overflow:auto; font-family: $sans-serif; }
+#mainnav #logo {float:left; margin:0;}
 #mainnav ul{margin:0;}
 #mainnav #searchform {float:right;}
 #mainnav nav {float:right;}
-#mainnav nav ul li {margin: 10px; text-transform:uppercase;}
+#mainnav nav ul li a {margin: 10px; color: $white; background:none;}
+
+.header .slogan h1{margin: 0.2em 0;}
+.header .slogan h2{font-family: $sans-serif-light; margin: 0.2em 0;}
 
 .footer {
 	clear: both;
@@ -135,7 +138,9 @@ be set to display none.
 }
 
 .footer #extras {
-	background: $drk-grey;
+	background: $black;
 	padding: 10px 0;
 	margin: 10px 0 0 0;
+	font-size:11px;
+	font-family: $sans-serif;
 }

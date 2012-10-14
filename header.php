@@ -55,15 +55,19 @@
 			
 			</div>
 
-			
-			<header class="header" role="banner">
-			
-				<div id="inner-header" class="wrap clearfix">
-					
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-					
+			<?php if(is_front_page()) { ?>
+
+				<header class="header" role="banner">
 				
-				</div> <!-- end #inner-header -->
+					<div id="inner-header" class="wrap clearfix">
+
+						<div class="slogan text-center">
+							<h1>Things just got a whole lot easier.</h1>
+							<h2>Our app lets you finish the job even faster.</h2>
+						</div>
+					
+					</div> <!-- end #inner-header -->
+				
+				</header> <!-- end header -->
 			
-			</header> <!-- end header -->
+			<?php } ?>

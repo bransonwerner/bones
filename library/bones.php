@@ -218,7 +218,14 @@ function bones_theme_support() {
 			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
 		)
 	);
-} /* end bones theme support */
+
+	//add theme options
+	if ( !function_exists( 'optionsframework_init' ) ) {
+	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/library/' );
+	require_once dirname( __FILE__ ) . '/options-framework.php';
+	}
+} /* end theme support */
+
 
 
 /*********************

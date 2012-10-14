@@ -63,7 +63,7 @@ $alert-red:         #fbe3e4;
 $alert-green:       #e6efc2;
 $alert-blue:        #d5edf8;
 
-$black:             #000;
+$black:             #191919;
 $white:             #fff;
 
 
@@ -87,13 +87,38 @@ TYPOGRAPHY
 $sans-serif:        'RobotoRegular', Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 
+$sans-serif-light:  'RobotoLight', Arial, sans-serif;
+$sans-serif-bold:   'RobotoBold', Arial, sans-serif;
+
 	@font-face {
     	font-family: 'RobotoRegular';
-    	src: url('library/fonts/Roboto-Regular-webfont.eot');
-    	src: url('library/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/Roboto-Regular-webfont.woff') format('woff'),
-             url('library/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
-             url('library/fonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    	src: url('../fonts/Roboto-Regular-webfont.eot');
+    	src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+             url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+             url('../fonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+
+		@font-face {
+    	font-family: 'RobotoLight';
+    	src: url('../fonts/Roboto-Light-webfont.eot');
+    	src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+             url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+             url('../fonts/Roboto-Light-webfont.svg#RobotoRegular') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+
+		@font-face {
+    	font-family: 'RobotoBold';
+    	src: url('../fonts/Roboto-Bold-webfont.eot');
+    	src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+             url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+             url('../fonts/Roboto-Bold-webfont.svg#RobotoRegular') format('svg');
     	font-weight: normal;
     	font-style: normal;
 	}
