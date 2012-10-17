@@ -26,7 +26,7 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-			
+
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
 		
@@ -35,24 +35,27 @@
 	<body <?php body_class(); ?>>
 	
 		<div id="container">
+        	
+        	<?php if(is_front_page()) { ?>
+        		<div class="slider">
+        	<?php } ?>
 
-			<div id="mainnav">
+					<div id="mainnav">
 
-				<div class="wrap" >
-					
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
-					
-					<?php get_search_form(); ?>
+						<div class="wrap" >
+							
+							<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
+							<h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri() ?>/library/images/logo.png">
+<?php /* bloginfo('name'); */ ?></a></h1>
+							
+							<?php get_search_form(); ?>
 
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
+							<nav role="navigation">
+								<?php bones_main_nav(); ?>
+							</nav>
 
-					
+						</div>
 
-				</div>
-			
 			</div>
 
 			<?php if(is_front_page()) { ?>
@@ -65,9 +68,28 @@
 							<h1>Things just got a whole lot easier.</h1>
 							<h2>Our app lets you finish the job even faster.</h2>
 						</div>
-					
+						
+						<div class="aligncenter">
+							<img class="aligncenter" src="<?php echo get_stylesheet_directory_uri() ?>/library/images/browsershot1.png" width="855" height="294">
+						</div>
+
 					</div> <!-- end #inner-header -->
 				
 				</header> <!-- end header -->
-			
+				</div> <!-- end slider -->
 			<?php } ?>
+
+				<?php if(is_front_page()) { ?>
+			
+					<script type="text/javascript">
+			    		jQuery(".slider").backstretch([
+			    			"<?php echo get_stylesheet_directory_uri() ?>/library/images/bg1.jpg",
+			    			"<?php echo get_stylesheet_directory_uri() ?>/library/images/bg2.jpg",
+			    			],{
+			    				fade: 900,
+            					duration: 5000
+			    			});
+
+					</script>
+            	
+        		<?php } ?>
