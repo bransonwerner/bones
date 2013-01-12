@@ -6,6 +6,7 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 	
 	<head>
+
 		<meta charset="utf-8">
 		
 		<title><?php wp_title(''); ?></title>
@@ -13,23 +14,41 @@
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<!-- mobile meta (hooray!) -->
+		<!-- mobile meta -->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<?php if ( of_get_option('pt_favicon_image') ) : ?>
+
+			<link rel="shortcut icon" href="<?php echo of_get_option('pt_favicon_image'); ?>">
+
+		<?php else : ?>
 		
-		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
-		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+
+		<?php endif; ?>
 				
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		
-		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
-		<!-- end of wordpress head -->
 
-		<!-- drop Google Analytics Here -->
-		<!-- end analytics -->
-		
+		<?php if ( of_get_option('pt_google_analytics') ) : ?>
+
+			<?php echo of_get_option('pt_google_analytics'); ?>
+
+		<?php endif; ?>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("a img.size-medium").fancybox({
+					'opacity'		: true,
+					'overlayShow'	: false,
+					'transitionIn'	: 'elastic',
+					'transitionOut'	: 'none'
+				});
+			});
+		</script>
 	</head>
 	
 	<body <?php body_class(); ?>>
@@ -37,21 +56,37 @@
 		<div id="container">
         	
         	<?php if(is_front_page()) { ?>
+
         		<div class="slider">
+        	
         	<?php } ?>
 
 					<div id="mainnav">
 
 						<div class="wrap" >
 							
-							<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-							<h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri() ?>/library/images/logo.png">
-<?php /* bloginfo('name'); */ ?></a></h1>
+							<div id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow">
+            					
+            					<?php if ( of_get_option('pt_logo_image') ) : ?>
+            						
+            						<img src="<?php echo of_get_option('pt_logo_image'); ?>" />
+            					
+            					<?php else : ?>
+
+									<?php bloginfo('name'); ?>
+								
+								<?php endif; ?>
+								
+								</a>
+							
+							</div>
 							
 							<?php get_search_form(); ?>
 
 							<nav role="navigation">
+								
 								<?php bones_main_nav(); ?>
+							
 							</nav>
 
 						</div>
@@ -65,29 +100,36 @@
 					<div id="inner-header" class="wrap clearfix">
 
 						<div class="slogan text-center">
+							
 							<h1>Things just got a whole lot easier.</h1>
 							<h2>Our app lets you finish the job even faster.</h2>
+						
 						</div>
 						
 						<div class="aligncenter">
+						
 							<img class="aligncenter" src="<?php echo get_stylesheet_directory_uri() ?>/library/images/browsershot1.png" width="855" height="294">
+						
 						</div>
 
 					</div> <!-- end #inner-header -->
 				
 				</header> <!-- end header -->
+				
 				</div> <!-- end slider -->
+			
 			<?php } ?>
 
 				<?php if(is_front_page()) { ?>
 			
 					<script type="text/javascript">
+			    		
 			    		jQuery(".slider").backstretch([
 			    			"<?php echo get_stylesheet_directory_uri() ?>/library/images/bg1.jpg",
 			    			"<?php echo get_stylesheet_directory_uri() ?>/library/images/bg2.jpg",
 			    			],{
 			    				fade: 900,
-            					duration: 5000
+            					duration: 6000
 			    			});
 
 					</script>

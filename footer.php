@@ -1,33 +1,50 @@
 			<footer class="footer" role="contentinfo">
 			
 				<div id="inner-footer" class="wrap clearfix">
-					<ul class="threecol first">
-						<h4>First Item</h4>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-					</ul>
+						
+						<div id="footercol1" class="threecol first clearfix">
 
-					<ul class="threecol">
-						<h4>Second Item</h4>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-					</ul>
+						<?php if ( is_active_sidebar( 'footer1' ) ) : ?>
 
-					<ul class="threecol">
-						<h4>Third Item</h4>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-					</ul>
+							<?php dynamic_sidebar( 'footer1' ); ?>
 
-					<ul class="threecol last">
-						<h4>Fourth Item</h4>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-						<li><a href="#">Entry 1</a></li>
-					</ul>
+						<?php endif; ?>
+
+					</div>
+
+
+					<div id="footercol2" class="threecol clearfix">
+
+						<?php if ( is_active_sidebar( 'footer2' ) ) : ?>
+
+							<?php dynamic_sidebar( 'footer2' ); ?>
+
+						<?php endif; ?>
+
+					</div>
+
+
+					<div id="footercol3" class="threecol clearfix">
+
+						<?php if ( is_active_sidebar( 'footer3' ) ) : ?>
+
+							<?php dynamic_sidebar( 'footer3' ); ?>
+
+						<?php endif; ?>
+
+					</div>
+
+
+					<div id="footercol4" class="threecol last clearfix">
+
+						<?php if ( is_active_sidebar( 'footer4' ) ) : ?>
+
+							<?php dynamic_sidebar( 'footer4' ); ?>
+
+						<?php endif; ?>
+
+					</div>
+
 
 					<nav role="navigation">
     					<?php bones_footer_links(); ?>

@@ -107,3 +107,13 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+
+/* Fancybox calls and js variables 
+
+    $(document).ready(function() {
+
+            $("a .size-medium").fancybox();
+            
+        });
+*/

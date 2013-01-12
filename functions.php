@@ -83,6 +83,47 @@ function bones_register_sidebars() {
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
     ));
+
+    register_sidebar(array(
+        'id' => 'footer1',
+        'name' => 'Footer Column 1',
+        'description' => 'The first column in the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'footer2',
+        'name' => 'Footer Column 2',
+        'description' => 'The second column in the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'footer3',
+        'name' => 'Footer Column 3',
+        'description' => 'The third column in the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'footer4',
+        'name' => 'Footer Column 4',
+        'description' => 'The fourth column in the footer.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
     
     /* 
     to add more sidebars or widgetized areas, just copy
