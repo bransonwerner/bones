@@ -125,22 +125,22 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
-    wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+    wp_register_script( 'pt-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
    // full screen for the homepage slider
     wp_register_script( 'pt-slider', get_stylesheet_directory_uri() . '/library/js/jquery.backstretch.min.js', array(), '', false );
 
    // Fancybox modal script
-    wp_register_script( 'pt-fancybox', get_stylesheet_directory_uri() . '/library/js/jquery.fancybox.pack.js', array(), '', false );
-
-    // Fancybox stylesheet
-    wp_register_style( 'pt-fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.fancybox.css', array(), '', 'all' );
+    wp_register_script( 'pt-fancybox', get_stylesheet_directory_uri() . '/library/js/jquery.fancybox.js', array( 'jquery' ), false, true );
 
     // register main stylesheet
-    wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+    wp_register_style( 'pt-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+
+   // Fancybox stylesheet
+    wp_register_style( 'pt-fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.fancybox.css', array(), '', 'screen' );
 
     // ie-only style sheet
-    wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+    wp_register_style( 'pt-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -148,13 +148,13 @@ function bones_scripts_and_styles() {
     }
 
     //adding scripts file in the footer
-    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+    wp_register_script( 'pt-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'pt-fancybox' ), false, true );
 
     // enqueue styles and scripts
-    wp_enqueue_script( 'bones-modernizr' );
+    wp_enqueue_script( 'pt-modernizr' );
+    wp_enqueue_style( 'pt-stylesheet' );
     wp_enqueue_style( 'pt-fancybox-stylesheet' );
-    wp_enqueue_style( 'bones-stylesheet' );
-    wp_enqueue_style('bones-ie-only');
+    wp_enqueue_style('pt-ie-only');
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
@@ -163,7 +163,7 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'pt-slider' );
     wp_enqueue_script( 'pt-fancybox' );
-    wp_enqueue_script( 'bones-js' );
+    wp_enqueue_script( 'pt-js' );
 
   }
 }

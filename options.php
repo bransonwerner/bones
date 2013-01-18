@@ -414,7 +414,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Theme Documentation & Support', 'options_framework_theme'),
 		'desc' => __('Theme support and documentation is available for all customers. Visit <a target="blank" href="http://www.populartheme.com/support">Support Forums</a>', 'options_framework_theme'),
-		'type' => 'info')
+		'type' => 'info');
 
 	return $options;
 }

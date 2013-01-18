@@ -38,17 +38,7 @@
 			<?php echo of_get_option('pt_google_analytics'); ?>
 
 		<?php endif; ?>
-
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$("a img.size-medium").fancybox({
-					'opacity'		: true,
-					'overlayShow'	: false,
-					'transitionIn'	: 'elastic',
-					'transitionOut'	: 'none'
-				});
-			});
-		</script>
+		
 	</head>
 	
 	<body <?php body_class(); ?>>
