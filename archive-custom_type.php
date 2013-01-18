@@ -15,15 +15,16 @@
 						    <header class="article-header">
 							
 							    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							
-							    <p class="byline vcard"><?php _e("Posted", "bonestheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span>.</p>
+                  <p class="byline vcard"><?php
+                    printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link());
+                  ?></p>
 						
 						    </header> <!-- end article header -->
 					
 						    <section class="entry-content clearfix">
 						
 							    <?php the_excerpt(); ?>
-					
+
 						    </section> <!-- end article section -->
 						
 						    <footer class="article-footer">
@@ -39,8 +40,8 @@
 					        <?php } else { ?>
 					            <nav class="wp-prev-next">
 					                <ul class="clearfix">
-					        	        <li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
-					        	        <li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
+					        	        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
+					        	        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
 					                </ul>
 					            </nav>
 					        <?php } ?>
